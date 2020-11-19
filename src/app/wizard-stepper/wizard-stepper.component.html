@@ -1,0 +1,20 @@
+<h2 mat-dialog-title>Add new machine
+  <button mat-icon-button class="close-button" [mat-dialog-close]="true">
+    <mat-icon class="close-icon" color="warn">close</mat-icon>
+  </button>
+</h2>
+<div mat-dialog-content>
+<mat-horizontal-stepper #stepper color="primary" (selectionChange)="onTabChanged($event)">
+  <mat-step *ngFor='let step of steps'>
+    <ng-template matStepLabel>{{step.title}}</ng-template>
+    <app-step-wrapper [item]=step.component #stepsreference></app-step-wrapper>
+  </mat-step>
+</mat-horizontal-stepper>
+</div>
+
+<div mat-dialog-actions>
+  <button mat-button color="primary" (click)="goBack()" type="button" [disabled]="stepper.selectedIndex === 0">Back</button>
+  <button mat-button color="accent" (click)="goForward()" type="button"
+          [disabled]="stepper?.selectedIndex === stepper?._steps?.length-1">Next</button>
+  <button *ngIf="lastStep" mat-button color="accent" (click)="save()" type="button" class="save-button">Save and close</button>
+</div>

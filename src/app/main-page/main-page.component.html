@@ -1,0 +1,30 @@
+<button  mat-raised-button (click)="openStepper()" class="add-button" color="primary">
+  <mat-icon>add</mat-icon>
+  <div style="margin: 0px 5px 0px; display: inline-block">Add machine</div>
+</button>
+
+<table mat-table [dataSource]="machines" class="mat-elevation-z8" #table>
+
+  <ng-container matColumnDef="fabnum">
+    <th mat-header-cell *matHeaderCellDef> Fabrication number </th>
+    <td mat-cell *matCellDef="let element"> {{element.fabnum}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef> Customer name </th>
+    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="contact">
+    <th mat-header-cell *matHeaderCellDef> Customer contact</th>
+    <td mat-cell *matCellDef="let element"> {{element.contact}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="desc">
+    <th mat-header-cell *matHeaderCellDef> Description </th>
+    <td mat-cell *matCellDef="let element"> {{element.desc}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

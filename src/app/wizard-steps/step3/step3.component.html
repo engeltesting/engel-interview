@@ -1,0 +1,6 @@
+<form [formGroup]="formGroup">
+  <mat-form-field>
+    <mat-label>Description</mat-label>
+    <textarea matInput  cdkTextareaAutosize placeholder="Text..." #autosize="cdkTextareaAutosize" formControlName="desc" required cdkAutosizeMinRows="4"></textarea>
+  </mat-form-field>
+</form>
