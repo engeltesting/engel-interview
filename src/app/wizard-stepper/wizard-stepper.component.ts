@@ -17,7 +17,6 @@ export class WizardStepperComponent implements OnInit {
   @ViewChild('stepper') private stepper: MatStepper;
   @ViewChildren('stepsreference') private stepsReference: QueryList<StepWrapperComponent>;
 
-  totalStepsCount: number;
   data: {};
   steps = [];
   lastStep = false;
@@ -38,23 +37,9 @@ export class WizardStepperComponent implements OnInit {
   }
 
   goForward(): void {
-    if (this.stepsReference.toArray()[this.stepper.selectedIndex].getReference().isStepValid()) {
-      const a = this.stepsReference.toArray()[this.stepper.selectedIndex].getReference().getFormData();
-      this.data = {...this.data, ...a};
-      this.stepper.next();
-    }
-  }
-
-  onTabChanged($event: StepperSelectionEvent) {
-    if ($event.selectedIndex === this.steps.length - 1) {
-      this.lastStep = true;
-    } else {
-      this.lastStep = false;
-    }
+    this.stepper.next();
   }
 
   save() {
-    this.data = {...this.data, ...this.stepsReference.toArray()[this.stepper.selectedIndex].getReference().getFormData()};
-    this.dialogRef.close(this.data);
   }
 }

@@ -25,11 +25,7 @@ export class MainPageComponent implements OnInit {
       disableClose: true});
 
     this.dialogRef.afterClosed().subscribe(result => {
-      console.log(result);
-      if (result instanceof Object && result.fabnum) {
-        this.machines.push(result);
-        this.table.renderRows();
-      }
+          console.log(result);
     });
   }
 }

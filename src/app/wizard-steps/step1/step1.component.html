@@ -2,5 +2,6 @@
   <mat-form-field>
     <mat-label>Fabrication number</mat-label>
     <input matInput placeholder="123456" formControlName="fabnum" required>
+    <mat-error *ngIf="!formGroup.controls['fabnum'].valid">Fabrication number is required</mat-error>
   </mat-form-field>
 </form>

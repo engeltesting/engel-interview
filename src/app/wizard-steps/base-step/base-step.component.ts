@@ -22,8 +22,4 @@ export abstract class BaseStepComponent implements OnInit {
     this.formGroup.markAllAsTouched();
     return this.formGroup.valid;
   }
-
-  getFormData(): any {
-    return this.formGroup.value;
-  }
 }
