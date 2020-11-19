@@ -31,6 +31,12 @@ import { MatTableModule } from '@angular/material/table';
     PageDirective,
     MainPageComponent
   ],
+  entryComponents: [
+    WizardStepperComponent,
+    Step1Component,
+    Step2Component,
+    Step3Component
+  ],
   imports: [
     CommonModule,
     BrowserModule,
