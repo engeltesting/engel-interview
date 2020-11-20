@@ -31,7 +31,7 @@ during everyday programming tasks.</p>
 
 
 
-###References for used components
+### References for used components
 
 https://material.angular.io/components/categories
 
