@@ -9,7 +9,7 @@ during everyday programming tasks.</p>
 
 <p>This code example is not a production code, but it reflects our daily work.</p>
 
-<p>The goal is rather the way itself than the result.</p>
+<p>The goal is the way itself rather than the result.</p>
 
 ### Tasks to complete:
 <ol>
