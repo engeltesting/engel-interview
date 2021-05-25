@@ -15,6 +15,8 @@ during everyday programming tasks.</p>
 <ol>
 <li>With your guide explore the code and the application <br><br></li>
 <li>Wizard step titles are now all the same – find out and implement the way to display them correctly<br><br></li>
+  <li>Fix styling problems
+	<ul>Align close button to the right</ul><br></li>
 <li>Action buttons – in the last step there should be button save and close – implement displaying this button only for this step and make this button to close the wizard
 	 <ul>Can we make other buttons also conditional?</ul><br></li>  
 <li>In each step there is a simple form – we can see now, there are some validations 
@@ -22,8 +24,6 @@ during everyday programming tasks.</p>
 – if form not valid, do not allow transition to next step
 <ul>How can we display validation error message everywhere?</ul><br></li>
 
-<li>Fix styling problems
-	<ul>Align close button to the right</ul><br></li>
 <li>When user fills out the wizard data should be stored and displayed in the table
 	<ul>Think about possible ways</ul>
 	<ul>Implement one approach</ul></li>
