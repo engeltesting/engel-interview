@@ -26,6 +26,8 @@ export class MainPageComponent implements OnInit {
 
     this.dialogRef.afterClosed().subscribe(result => {
           console.log(result);
+          this.machines.push(result);
+          this.table.renderRows();
     });
   }
 }
