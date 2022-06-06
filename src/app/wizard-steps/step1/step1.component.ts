@@ -18,4 +18,8 @@ export class Step1Component extends BaseStepComponent implements OnInit {
       fabnum: ['', Validators.required]
     });
   }
+
+  removeCharacters() {
+
+  }
 }

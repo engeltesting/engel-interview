@@ -13,7 +13,7 @@ import { CommonModule } from '@angular/common';
 import { BaseStepComponent } from './wizard-steps/base-step/base-step.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MainPageComponent } from './main-page/main-page.component';
-import { MatDialogModule } from '@angular/material/dialog';
+import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -52,7 +52,10 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatTableModule,
     MatSnackBarModule,
   ],
-  providers: [],
+  providers: [{
+    provide: MatDialogRef,
+    useValue: {}
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
