@@ -24,7 +24,7 @@ describe('Step3Component', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should validate', () => {
+  it('should remove special characters', () => {
 
   });
 });

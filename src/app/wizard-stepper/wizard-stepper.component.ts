@@ -2,12 +2,10 @@ import { Component, OnInit, QueryList, ViewChild, ViewChildren } from '@angular/
 import { Step1Component } from '../wizard-steps/step1/step1.component';
 import { Step2Component } from '../wizard-steps/step2/step2.component';
 import { Step3Component } from '../wizard-steps/step3/step3.component';
-import { MatHorizontalStepper, MatStepper } from '@angular/material/stepper';
-import { BaseStepComponent } from '../wizard-steps/base-step/base-step.component';
 import { StepWrapperComponent } from '../step-wrapper/step-wrapper.component';
-import { StepperSelectionEvent } from '@angular/cdk/stepper';
 import { MatDialogRef } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { MatStepper } from '@angular/material/stepper';
 
 export interface TableObject {
   fabNum: number;
@@ -51,6 +49,10 @@ export class WizardStepperComponent implements OnInit {
     } else {
       this.snackBar.open('Form not valid!', 'OK', {duration: 1000});
     }
+  }
+
+  close() {
+    this.dialogRef.close();
   }
 
   save() {

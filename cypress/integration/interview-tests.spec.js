@@ -8,7 +8,7 @@ describe('starep overview', () => {
     cy.get('.mat-dialog-container').should('be.visible');
   });
 
-  it('should click close', () => {
+  it('should open add machine and close popup', () => {
 
   });
 

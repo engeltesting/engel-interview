@@ -15,9 +15,13 @@ during everyday programming tasks.</p>
 <ol>
   <li>With your guide explore the code and the application</li>
   <br>
-  <li>Try to figure out where Unit tests should be implemented
-    <ul> - If so implement them</ul>
-  </li>
+  <li>Try to figure out where Unit tests should be implemented</li>
+  <br>
+  <li>Start testing environment (jasmine)</li>
+  <br>
+  <li> Implement at least one unit test</li>
+  <br>
+  <li>Try to figure out where e2e (UI) tests should be implemented</li>
   <br>
   <li>Start testing environment (cypress)</li>
   <br>

@@ -1,7 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { WizardStepperComponent } from '../wizard-stepper/wizard-stepper.component';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
-import { MatStepper } from '@angular/material/stepper';
 import { MatTable } from '@angular/material/table';
 
 @Component({
@@ -25,9 +24,11 @@ export class MainPageComponent implements OnInit {
       disableClose: true});
 
     this.dialogRef.afterClosed().subscribe(result => {
-          console.log(result);
-          this.machines.push(result);
-          this.table.renderRows();
+      if (result != null) {
+        console.log(result);
+        this.machines.push(result);
+        this.table.renderRows();
+      }
     });
   }
 }

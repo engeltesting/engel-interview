@@ -30,14 +30,6 @@ describe('WizardStepperComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should go back', () => {
-
-  });
-
-  it('should go forward', () => {
-
-  });
-
   it('should save', () => {
 
   });

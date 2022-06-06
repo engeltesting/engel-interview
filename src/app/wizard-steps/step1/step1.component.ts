@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BaseStepComponent } from '../base-step/base-step.component';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-step1',
@@ -21,6 +21,6 @@ export class Step1Component extends BaseStepComponent implements OnInit {
   }
 
   public removeCharacters() {
-  this.fabnumValue = this.fabnumValue.replaceAll(/[^0-9]/g, '');
+    this.fabnumValue = this.fabnumValue.replaceAll(/[^0-9]/g, '');
   }
 }

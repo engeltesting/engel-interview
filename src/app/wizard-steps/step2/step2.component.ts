@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BaseStepComponent } from '../base-step/base-step.component';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-step2',
@@ -17,5 +17,9 @@ export class Step2Component extends BaseStepComponent implements OnInit {
       name: ['', Validators.required],
       contact: ['', Validators.compose([Validators.required, Validators.email])],
     });
+  }
+
+  resetValues() {
+    this.formGroup.reset();
   }
 }

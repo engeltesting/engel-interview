@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BaseStepComponent } from '../base-step/base-step.component';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-step3',
@@ -8,6 +8,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./step3.component.css']
 })
 export class Step3Component extends BaseStepComponent implements OnInit {
+  descriptionValue: any;
 
   constructor(private formBuilder: FormBuilder) {super(); }
 
@@ -15,5 +16,9 @@ export class Step3Component extends BaseStepComponent implements OnInit {
     this.formGroup = this.formBuilder.group({
       desc: ['', Validators.required],
     });
+  }
+
+  removeSpecialCharacters() {
+    this.descriptionValue = this.descriptionValue.replaceAll(/[^a-zA-Z ]/g, '');
   }
 }

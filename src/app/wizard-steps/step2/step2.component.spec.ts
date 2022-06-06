@@ -23,7 +23,7 @@ describe('Step2Component', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should validate', () => {
+  it('should reset form values', () => {
 
   });
 });

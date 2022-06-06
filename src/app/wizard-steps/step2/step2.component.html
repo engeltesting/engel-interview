@@ -8,4 +8,5 @@
     <mat-label>Customer contact</mat-label>
     <input matInput placeholder="contact@email.com" formControlName="contact" required>
   </mat-form-field>
+  <button mat-button color="primary" (click)="resetValues()" type="button" [disabled]="formGroup.untouched">Reset</button>
 </form>

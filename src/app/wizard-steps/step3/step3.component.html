@@ -1,6 +1,8 @@
 <form [formGroup]="formGroup">
   <mat-form-field>
     <mat-label>Description</mat-label>
-    <textarea matInput  cdkTextareaAutosize placeholder="Text..." #autosize="cdkTextareaAutosize" formControlName="desc" required cdkAutosizeMinRows="4"></textarea>
+    <textarea matInput  cdkTextareaAutosize placeholder="Text..." #autosize="cdkTextareaAutosize"
+              formControlName="desc" required cdkAutosizeMinRows="4" [(ngModel)]="descriptionValue"></textarea>
   </mat-form-field>
+  <button mat-button color="primary" (click)="removeSpecialCharacters()" type="button" [disabled]="descriptionValue === null">Remove special characters</button>
 </form>
