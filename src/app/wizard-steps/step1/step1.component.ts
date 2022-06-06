@@ -8,6 +8,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./step1.component.css']
 })
 export class Step1Component extends BaseStepComponent implements OnInit {
+  fabnumValue: any;
 
   constructor(private formBuilder: FormBuilder) {
     super();
@@ -19,7 +20,7 @@ export class Step1Component extends BaseStepComponent implements OnInit {
     });
   }
 
-  removeCharacters() {
-
+  public removeCharacters() {
+  this.fabnumValue = this.fabnumValue.replaceAll(/[^0-9]/g, '');
   }
 }

@@ -23,7 +23,6 @@ describe('Step1Component', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should validate', () => {
-
+  it('should remove characters from string', () => {
   });
 });

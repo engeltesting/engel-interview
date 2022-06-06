@@ -5,7 +5,7 @@ describe('starep overview', () => {
 
   it('should open add machine', () => {
     cy.get('[data-cy=add-button]').click()
-    cy.get('')
+    cy.get('.mat-dialog-container').should('be.visible');
   });
 
   it('should click close', () => {
